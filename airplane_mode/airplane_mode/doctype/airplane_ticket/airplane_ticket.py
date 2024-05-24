@@ -13,9 +13,12 @@ class AirplaneTicket(Document):
 			"Airplane Ticket",
 			{"flight": self.flight},
 		)
-		if ticket_count > capacity:
-			# raise frappe.ValidationError(_("Airplane Capacity is Full"))
-			frappe.throw(_("Airplane Capacity is Full"))
+		if ticket_count >= capacity:
+			frappe.throw(f"Cannot create ticket. Airplane {airplane} is already at full capacity.", frappe.ValidationError)
+
+		# if ticket_count > capacity:
+		# 	# raise frappe.ValidationError(_("Airplane Capacity is Full"))
+		# 	frappe.throw(_("Airplane Capacity is Full"))
 		# validate_capacity(self.flight)
 	# 	import random
 	# 	import string

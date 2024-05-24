@@ -176,7 +176,6 @@
    "fieldtype": "Link",
    "label": "Gate No",
    "options": "Gate Details",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -194,7 +193,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-05-24 08:55:13.742904",
+ "modified": "2024-05-24 14:13:55.272791",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
