@@ -2,14 +2,14 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Airplane Ticket", {
-    validate: function (frm) {
-		frappe.call({
-            method: "airplane_mode.airplane_mode.doctype.airplane_ticket.airplane_ticket.validate_capacity",
-            args: {
-                flight: frm.doc.flight
-            },
-        });
-	},
+    // validate: function (frm) {
+	// 	frappe.call({
+    //         method: "airplane_mode.airplane_mode.doctype.airplane_ticket.airplane_ticket.validate_capacity",
+    //         args: {
+    //             flight: frm.doc.flight
+    //         },
+    //     });
+	// },
 	refresh(frm) {
         frm.add_custom_button(
             __("Assign Seat"),

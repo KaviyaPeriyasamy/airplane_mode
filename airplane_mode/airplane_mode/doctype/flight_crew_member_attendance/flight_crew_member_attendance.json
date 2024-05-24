@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FCMA-{#####}",
+ "creation": "2024-05-24 08:12:09.402660",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dmsb",
+  "member",
+  "date",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dmsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Flight Crew Member Attendance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Flight Crew Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Present\nAbsent",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-24 08:19:24.344022",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Flight Crew Member Attendance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Present"
+  },
+  {
+   "color": "Red",
+   "title": "Absent"
+  }
+ ]
+}

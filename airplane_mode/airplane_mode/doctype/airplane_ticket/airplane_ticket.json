@@ -15,8 +15,10 @@
   "airline",
   "section_break_bgfw",
   "source_airport_code",
+  "gate_no",
   "column_break_kvup",
   "destination_airport_code",
+  "gate_closes_at",
   "section_break_tfl7",
   "add_ons",
   "section_break_zqrj",
@@ -174,12 +176,26 @@
    "fieldtype": "Data",
    "label": "Airline",
    "read_only": 1
+  },
+  {
+   "fetch_from": "flight.gate_no",
+   "fieldname": "gate_no",
+   "fieldtype": "Link",
+   "label": "Gate No",
+   "options": "Gate Details",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gate_no.gate_closes_at",
+   "fieldname": "gate_closes_at",
+   "fieldtype": "Time",
+   "label": "Gate Closes At"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-24 03:54:55.395691",
+ "modified": "2024-05-24 14:03:40.312146",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

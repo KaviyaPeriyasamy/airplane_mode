@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-24 09:14:54.603953",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_rent_amount_for_shop",
+  "rent_reminder"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_rent_amount_for_shop",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Default Rent Amount for Shop",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "rent_reminder",
+   "fieldtype": "Check",
+   "label": "Rent Reminder"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-24 09:15:50.133231",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Airport Shop Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

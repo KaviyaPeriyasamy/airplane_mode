@@ -232,7 +232,7 @@ fixtures = [
     {"dt": "Server Script", "filters": [
         [
             "module", "in", [
-                "Airplane Mode"
+                "Airplane Mode", "Airport Shop Management"
             ]
         ]
     ]}
