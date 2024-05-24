@@ -1,0 +1,10 @@
+<div class="py-20 row">
+<div class="col">
+<h4><b>{{ doc.airline }}</b></h4>
+<h5>{{ doc.source_airport_code }} -> {{doc.destination_airport_code}}</h5>
+<div>{{ frappe.format_date(doc.date_of_departure) }} | {{ doc.time_of_departure }} | {{frappe.utils.format_duration(doc.duration) }}</div>
+<div><a style="margin-right: 7px; margin-bottom: 7px" class="btn btn-primary btn-sm" href="{{doc.route}}">
+	{{ _("View Flight") }}</a>
+	</div>
+</div>
+</div>

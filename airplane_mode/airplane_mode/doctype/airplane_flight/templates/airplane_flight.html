@@ -1,0 +1,17 @@
+{%  extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="py-20 row">
+    <div class="col">
+    <h4><b>{{ doc.name }}</b></h4>
+    <h5>Flight Details</h5>
+    <li>Airline: {{doc.airline}}</li>
+    <li>{{ doc.source_airport_code }} -> {{doc.destination_airport_code}}</li>
+    <li>{{ frappe.format_date(doc.date_of_departure) }} | {{ doc.time_of_departure }} | {{frappe.utils.format_duration(doc.duration) }}</li>
+    <a style="margin-right: 7px; margin-bottom: 7px" class="btn btn-primary btn-xs" href="/book-tickets/new?flight={{doc.name}}&&flight_price={{doc.flight_price}}">
+        {{ _("Book Flight") }}</a>
+	</div>
+    </div>
+    
+
+{% endblock %}

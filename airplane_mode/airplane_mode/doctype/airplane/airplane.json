@@ -1,12 +1,20 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "format:{airline}-{#####}",
  "creation": "2024-05-19 00:52:32.061978",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "model",
   "airline",
+  "initial_audit_completed",
+  "image",
+  "route",
+  "published",
+  "column_break_plzs",
+  "model",
   "capacity"
  ],
  "fields": [
@@ -32,14 +40,47 @@
    "label": "Capacity",
    "non_negative": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "initial_audit_completed",
+   "fieldtype": "Check",
+   "label": "Initial Audit Completed",
+   "permlevel": 6
+  },
+  {
+   "fieldname": "column_break_plzs",
+   "fieldtype": "Column Break"
   }
  ],
+ "has_web_view": 1,
+ "image_field": "image",
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2024-05-23 00:04:22.962289",
+ "modified": "2024-05-24 03:57:49.857798",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -53,9 +94,32 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Fleet Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Airport Authority Personnel",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Travel Agent"
+  },
+  {
+   "read": 1,
+   "role": "Flight Crew Member"
   }
  ],
  "quick_entry": 1,
+ "route": "airplanes",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []
